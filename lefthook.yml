@@ -1,0 +1,14 @@
+#   Refer for explanation to following link:
+#   https://github.com/evilmartians/lefthook/blob/master/docs/configuration.md
+
+pre-commit:
+  parallel: true
+  commands:
+    biome-check:
+      glob: "*.{js,ts,jsx,tsx}"
+      run: |
+        bun biome check --apply {staged_files}
+        git add {staged_files}
+    biome-lint:
+      glob: "*.{js,ts,jsx,tsx}"
+      run: bun biome lint {staged_files}
