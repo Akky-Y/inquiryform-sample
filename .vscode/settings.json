@@ -21,4 +21,5 @@
     }
   },
   "typescript.preferences.importModuleSpecifier": "non-relative",
+  "editor.tabSize": 2
 }
