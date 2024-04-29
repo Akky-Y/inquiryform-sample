@@ -22,9 +22,10 @@ export default function MailForm() {
 
   useEffect(() => {
     if (form.formState.isSubmitSuccessful) {
+      form.reset();
       toast.success("メール送信に成功しました！");
     }
-  }, [form.formState.isSubmitSuccessful]);
+  }, [form.formState.isSubmitSuccessful, form.reset]);
 
   return (
     <Form {...form}>
